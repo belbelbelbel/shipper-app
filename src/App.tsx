@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { Hero } from './Component/Hero'
+import { Signup } from './Component/Auth/Signup'
 
 function App() {
   const location = useLocation()
@@ -11,6 +12,7 @@ function App() {
   return (
     <Routes location={location} key={location.key}> 
       <Route path='/' element={<Hero/>}/>
+      <Route path='/signup' element={<Signup/>}/>
     </Routes>
   )
 }
