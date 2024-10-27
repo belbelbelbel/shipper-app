@@ -5,6 +5,7 @@ import './App.css'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { Hero } from './Component/Hero'
 import { Signup } from './Component/Auth/Signup'
+import { PersonalInfo } from './Component/PersonalInfo'
 
 function App() {
   const location = useLocation()
@@ -13,6 +14,7 @@ function App() {
     <Routes location={location} key={location.key}> 
       <Route path='/' element={<Hero/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/signup/PI' element={<PersonalInfo/>}/>
     </Routes>
   )
 }
