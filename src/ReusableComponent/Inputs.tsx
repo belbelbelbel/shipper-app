@@ -1,7 +1,18 @@
 import React from 'react'
 
-export const Inputs = () => {
+interface InputProps {
+    type: string,
+    value: string,
+    name: string,
+    placeholder: string,
+    className?: string,
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void, 
+  
+}
+export const Inputs = ({type,value,name,placeholder,className,onChange}:InputProps) => {
   return (
-    <div>Inputs</div>
+    <div>
+        <input type={type}  value={value} onChange={onChange}  name={name} placeholder={placeholder} className={className}/>
+    </div>
   )
 }
