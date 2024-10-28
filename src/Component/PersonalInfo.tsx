@@ -42,12 +42,12 @@ export const PersonalInfo = () => {
                         {/* <div className='w-full h-[1.5px] bg-black mb-2'></div> */}
                         <form className='flex flex-col'>
                             <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-3 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.password} name='email' onChange={handleChange} placeholder='email' />
-                            <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-4 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.email} name='firstname' onChange={handleChange} placeholder='password' />
+                            <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-4 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.email} name='password' onChange={handleChange} placeholder='password' />
                         </form>
                     </div>
                     <div className='w-full'>
                         <div className='font-bold text-[1.1rem] mb-2 mt-4'>Business Information</div>
-                        <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-2 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.password} name='BusinessName' onChange={handleChange} placeholder='business name' />
+                        <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-2 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.company} name='company' onChange={handleChange} placeholder='business name' />
                         <Select>
                             <SelectTrigger className="w-full">
                                 <SelectValue placeholder="business type" />
@@ -61,7 +61,7 @@ export const PersonalInfo = () => {
                             </SelectContent>
                         </Select>
                         {/* <div className='w-full h-[1.5px] bg-black mb-2'></div> */}
-                        <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-3 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.password} name='BusinessName' onChange={handleChange} placeholder='address' />
+                        <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-3 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.address} name='address' onChange={handleChange} placeholder='address' />
                         <Select>
                             <SelectTrigger className="w-full">
                                 <SelectValue placeholder="business size" />
@@ -74,7 +74,7 @@ export const PersonalInfo = () => {
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
-                        <Button className='w-full mt-4 h-12 text-[1.11rem]'>Create Account</Button>
+                        {/* <Button className='w-full mt-4 h-12 text-[1.11rem]'>Create Account</Button> */}
                     </div>
 
                 </div>
