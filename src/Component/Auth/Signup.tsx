@@ -23,9 +23,9 @@ export const Signup = () => {
             title: 'Logistic Provider'
         }
     ]
-    const handleSelect = (id: number) => {
+    const handleSelect = (id: number,title: string) => {
         setIsselected(id)
-        localStorage.setItem('selectedRoleId', id.toString())
+        localStorage.setItem('selectedRoleId', title)
     }
 
 
@@ -40,17 +40,16 @@ export const Signup = () => {
             <div className='flex w-[80%]  mx-auto'>
                 {
                     array.map((item, index) => (
-                        <div key={index} className={`w-[19rem] justify-center gap-4 flex flex-col items-center rounded-[10px] cursor-pointer mx-auto h-60 shadow ${isselected === item.id ? 'bg-black bg-opacity-[0.97] text-white' : ''}`} onClick={() => handleSelect(item.id)}>
+                        <div key={index} className={`w-[19rem] justify-center gap-4 flex flex-col items-center rounded-[10px] cursor-pointer mx-auto h-60 shadow ${isselected === item.id ? 'bg-black bg-opacity-[0.97] transition ease-out duration-300 text-white' : ''}`} onClick={() => handleSelect(item.id,item.title)}>
                             <img className='text-[] w-[5rem]' src={item.img} />
                             <div className='text-[1.5rem]'> {item.title}</div>
-
                         </div>
                     ))
                 }
             </div>
             <div className='flex w-[20%] items-center mx-auto justify-between '>
                 {/* <div className='px-10 py-2 bg-transparent border-2 border-black text-black font-bold cursor-pointer  rounded-full' onClick={()=>navigate('/')}>Back</div> */}
-                <div className={` py-3 w-full text-center rounded-full ${isselected !== "" ? "bg-black text-white": "bg-transparent text-black border-black border-2" } font-bold cursor-pointer`} onClick={handleNext}>Next</div>
+                <div className={` py-3 w-full text-center rounded-full ${isselected !== "" ? "bg-black transition ease-out duration-700 text-white": "bg-transparent text-black border-black border-2" } font-bold cursor-pointer`} onClick={handleNext}>Next</div>
             </div>
         </div>
     )

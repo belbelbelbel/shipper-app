@@ -7,6 +7,8 @@ import { Hero } from './Component/Hero'
 import { Signup } from './Component/Auth/Signup'
 import { PersonalInfo } from './Component/PersonalInfo'
 import useWindowSize from './Hooks/useWindowSize'
+import { Signin } from './Component/Auth/Signin'
+import { Dashboard } from './Component/Dashboard'
 
 function App() {
   const location = useLocation()
@@ -25,6 +27,7 @@ console.log(width)
     <Routes location={location} key={location.key}> 
       <Route path='/' element={<Hero/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/signin' element={<Signin/>}/>
       <Route path='/signup/PI' element={<PersonalInfo/>}/>
     </Routes>
   )

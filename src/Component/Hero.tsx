@@ -12,7 +12,7 @@ export const Hero = () => {
                         <div className='text-[2.7rem]  text-white hero-logo tracking-[3px] text-opacity-[1]'>Shi-Go</div>
                         <div className='flex gap-10 text-black text-xl'>
                             <button className='bg-white px-10 py-1.5 shadow-2xl rounded-[10px] hover:text-black  hover:bg-white hover:bg-opacity-[0.9] font-bold' onClick={() => navigate('/signup')}>Sign Up</button>
-                            <button className='bg-white px-10 py-1.5 shadow-2xl rounded-[10px] hover:text-black hover:bg-white hover:bg-opacity-[0.9] font-bold'>Sign In</button>
+                            <button className='bg-white px-10 py-1.5 shadow-2xl rounded-[10px] hover:text-black hover:bg-white hover:bg-opacity-[0.9] font-bold' onClick={() => navigate('/signin')}>Sign In</button>
                         </div>
                     </div>
                 </div>

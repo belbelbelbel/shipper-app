@@ -10,8 +10,10 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import { useNavigate } from 'react-router-dom'
 
 export const PersonalInfo = () => {
+    const navigate = useNavigate()
     const [Value, setValue] = useState({
         firstName: '',
         email: '',
@@ -30,15 +32,18 @@ export const PersonalInfo = () => {
     }
     console.log(Value.firstName)
     return (
-        <div className='w-screen  flex i  h-screen bg-[rgb(230,230,230)]'>
+        <div className='w-screen  flex i  h-screen '>
             <div className='w-[50%] h-full'>
                 <img src="/src/assets/pexels-n-voitkevich-6120220.jpg" loading='lazy' alt="signup_logo" className='object-cover w-full h-full' />
             </div>
             <div className='w-[50%] flex flex-col mt-10 gap-10'>
                 <div className='font-bold text-[2rem] text-center'>Create Account</div>
-                <div className='w-[80%] mx-auto  flex flex-col gap-2 '>
+                <div className='w-[80%] mx-auto  flex flex-col gap-1 '>
                     <div>
-                        <div className='font-bold text-[1.1rem] mb-2'>Personal Information</div>
+                        <div className='flex w-full justify-between items-center'>
+                            <div className='font-bold text-[1.1rem] mb-1'>Personal Information</div>
+                            <div className=' text-[1rem] mb-2 cursor-pointer bg-black text-white px-8 py-1 rounded-[5px] ' onClick={() => navigate('/signin')}>Sign In</div>
+                        </div>
                         {/* <div className='w-full h-[1.5px] bg-black mb-2'></div> */}
                         <form className='flex flex-col'>
                             <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-3 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.password} name='email' onChange={handleChange} placeholder='email' />
@@ -46,7 +51,7 @@ export const PersonalInfo = () => {
                         </form>
                     </div>
                     <div className='w-full'>
-                        <div className='font-bold text-[1.1rem] mb-2 mt-4'>Business Information</div>
+                        <div className='font-bold text-[1.1rem] mb-1 mt-4'>Business Information</div>
                         <Inputs type='text' className='text-black outline-0 w-[100%]  mx-auto rounded-[7px]  mt-2 border-black bg-transparent   border-2 h-[7vh]  p-3' value={Value.company} name='company' onChange={handleChange} placeholder='business name' />
                         <Select>
                             <SelectTrigger className="w-full">
@@ -74,7 +79,7 @@ export const PersonalInfo = () => {
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
-                        {/* <Button className='w-full mt-4 h-12 text-[1.11rem]'>Create Account</Button> */}
+                        <Button className='w-full mt-4 h-12 text-[1.11rem]'>Create Account</Button>
                     </div>
 
                 </div>
