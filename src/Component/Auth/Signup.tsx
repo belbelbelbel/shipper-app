@@ -35,12 +35,12 @@ export const Signup = () => {
        }
     }
     return (
-        <div className='bg-[rgb(230,230,230)] flex flex-col justify-center gap-16 items-center h-screen w-screen '>
+        <div className='bg-[rgb(230,230,230)] bg-blue-100 bg-opacity-[0.3] flex flex-col justify-center gap-16 items-center h-screen w-screen '>
             <div className='text-2xl uppercase font-medium'>Select Your Role</div>
             <div className='flex w-[80%]  mx-auto'>
                 {
                     array.map((item, index) => (
-                        <div key={index} className={`w-[19rem] justify-center gap-4 flex flex-col items-center rounded-[10px] cursor-pointer mx-auto h-60 shadow ${isselected === item.id ? 'bg-black bg-opacity-[0.97] transition ease-out duration-300 text-white' : ''}`} onClick={() => handleSelect(item.id,item.title)}>
+                        <div key={index} className={`w-[19rem] justify-center gap-4 flex flex-col items-center rounded-[10px] cursor-pointer mx-auto h-60  ${isselected === item.id ? 'bg-black transition ease-out duration-300 text-white' : 'shadows'}`} onClick={() => handleSelect(item.id,item.title)}>
                             <img className='text-[] w-[5rem]' src={item.img} />
                             <div className='text-[1.5rem]'> {item.title}</div>
                         </div>

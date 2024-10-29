@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Inputs } from '../ReusableComponent/Inputs'
+import { Inputs } from '../../ReusableComponent/Inputs'
 import { Button } from "@/components/ui/button"
 import {
     Select,
@@ -32,12 +32,12 @@ export const PersonalInfo = () => {
     }
     console.log(Value.firstName)
     return (
-        <div className='w-screen  flex i  h-screen '>
+        <div className='w-screen bg-blue-100 bg-opacity-[0.3]  flex i  h-screen '>
             <div className='w-[50%] h-full'>
                 <img src="/src/assets/pexels-n-voitkevich-6120220.jpg" loading='lazy' alt="signup_logo" className='object-cover w-full h-full' />
             </div>
-            <div className='w-[50%] flex flex-col mt-10 gap-10'>
-                <div className='font-bold text-[2rem] text-center'>Create Account</div>
+            <div className='w-[50%] flex  h-full flex-col justify-center pt-10 gap-10'>
+                {/* <div className='font-bold text-[2rem] text-center'></div> */}
                 <div className='w-[80%] mx-auto  flex flex-col gap-1 '>
                     <div>
                         <div className='flex w-full justify-between items-center'>
@@ -79,7 +79,7 @@ export const PersonalInfo = () => {
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
-                        <Button className='w-full mt-4 h-12 text-[1.11rem]'>Create Account</Button>
+                        <Button className='w-full mt-4 h-12 text-[1.11rem]' onClick={() => navigate('/overview')}>Create Account</Button>
                     </div>
 
                 </div>
