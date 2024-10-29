@@ -11,6 +11,7 @@ import { Signin } from './Component/Auth/Signin'
 import { Dashboard } from './Component/NextedRoute/Dashboard'
 import { MainContainer } from './Component/MainContainer'
 import { Settings } from './Component/NextedRoute/Settings'
+import { Supplier } from './Component/NextedRoute/Supplier'
 
 function App() {
   const location = useLocation()
@@ -34,6 +35,7 @@ function App() {
       <Route path='overview' element={<MainContainer />}>
         <Route index element={<Dashboard />} />
         <Route path='settings' element={<Settings />} />
+        <Route path='suppliers' element={<Supplier />} />
       </Route>
     </Routes>
   )

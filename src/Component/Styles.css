@@ -16,7 +16,7 @@
   }
   .hero-logo {
     font-family: "Permanent Marker", cursive;
-    text-shadow: 2px 2px 2px black;
+    /* text-shadow: 2px 2px 2px black; */
   }
   .hero-text {
     text-shadow: 2px 2px 2px black;

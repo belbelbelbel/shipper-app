@@ -9,6 +9,7 @@ export const Signup = () => {
     const array = [
         {
             id: 1,
+           
             img: 'src/assets/Seller.png',
             title: 'Business',
         },
