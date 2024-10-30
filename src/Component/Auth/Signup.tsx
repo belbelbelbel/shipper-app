@@ -16,7 +16,7 @@ export const Signup = () => {
         {
             id: 2,
             img: 'src/assets/Supplier.png',
-            title: 'Supplier',
+            title: 'Supplier / Service Provider',
         },
         {
             id: 3,

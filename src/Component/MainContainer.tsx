@@ -49,7 +49,7 @@ export const MainContainer = () => {
                         ))}
                     </div>
                     <div className='flex w-[80%] cursor-pointer mx-auto items-center gap-4'>
-                        <div ><IoLogOut size={30} /></div>
+                        <div><IoLogOut size={30} /></div>
                         <div onClick={() => navigate('/signin')}>Logout</div>
                     </div>
                 </div>

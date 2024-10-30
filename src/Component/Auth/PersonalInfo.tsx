@@ -11,6 +11,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { useNavigate } from 'react-router-dom'
+import { smeSectors } from '@/Constant'
 
 export const PersonalInfo = () => {
     const navigate = useNavigate()
@@ -22,6 +23,7 @@ export const PersonalInfo = () => {
         company: '',
         address: '',
     })
+    
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value, name } = e.target
@@ -59,9 +61,11 @@ export const PersonalInfo = () => {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
-                                    {/* <SelectLabel>F</SelectLabel> */}
-                                    <SelectItem value="apple">Apple</SelectItem>
-                                    <SelectItem value="banana">Banana</SelectItem>
+                                    {
+                                        smeSectors.map((smeSector) => (
+                                            <SelectItem value={smeSector}>{smeSector}</SelectItem>
+                                        ))
+                                    }
                                 </SelectGroup>
                             </SelectContent>
                         </Select>

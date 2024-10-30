@@ -8,7 +8,7 @@ export const Supplier = () => {
         {
           arrayBox.map(() => (
             <div className='w-[13rem] h-[13rem] cursor-pointer  justify-center items-center flex  bg-white shadow'>
-              <img src="/src/assets/user.png" alt="" className='w-[4rem] h-[4rem]'/>
+              <img src="/src/assets/user.png" alt="" className='w-[5rem] h-[5rem]'/>
             </div>
           ))
         }
