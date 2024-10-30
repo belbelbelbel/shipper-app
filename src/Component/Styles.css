@@ -30,8 +30,8 @@
   }
 
   input::placeholder {
-    color: black;
-    opacity: 1;
+    /* color: black; */
+    /* opacity: 1; */
     font-size: 0.9rem
   }
   .shadows {
