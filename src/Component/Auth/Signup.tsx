@@ -24,9 +24,9 @@ export const Signup = () => {
             title: 'Logistic Provider'
         }
     ]
-    const handleSelect = (id: number,title: string) => {
+    const handleSelect = (id: number | any) => {
         setIsselected(id)
-        localStorage.setItem('selectedRoleId', title)
+        localStorage.setItem('selectedRoleId', id)
     }
 
 
@@ -41,7 +41,7 @@ export const Signup = () => {
             <div className='flex w-[80%]  mx-auto'>
                 {
                     array.map((item, index) => (
-                        <div key={index} className={`w-[19rem] justify-center gap-4 flex flex-col items-center rounded-[10px] cursor-pointer mx-auto h-60  ${isselected === item.id ? 'bg-black transition ease-out duration-300 text-white' : 'shadows'}`} onClick={() => handleSelect(item.id,item.title)}>
+                        <div key={index} className={`w-[19rem] justify-center gap-4 flex flex-col items-center rounded-[10px] cursor-pointer mx-auto h-60  ${isselected === item.id ? 'bg-black transition ease-out duration-300 text-white' : 'shadows'}`} onClick={() => handleSelect(item.id)}>
                             <img className='text-[] w-[5rem]' src={item.img} />
                             <div className='text-[1.5rem]'> {item.title}</div>
                         </div>

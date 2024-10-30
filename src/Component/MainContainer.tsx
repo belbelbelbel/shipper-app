@@ -6,6 +6,7 @@ import { IoSettingsSharp } from "react-icons/io5";
 import { IoMdNotifications } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
 export const MainContainer = () => {
+    const BusinessName = localStorage.getItem('selectedRoleId')
     const navigate = useNavigate()
     const LinkArray = [
         {
@@ -62,7 +63,7 @@ export const MainContainer = () => {
                             <img src="/src/assets/profilepic.png" alt="profile" className='w-12 h-12' />
                             <div className='flex w-full flex-col'>
                                 <div className='text-[0.9rem]'>Bendee</div>
-                                <div>Business made</div>
+                                <div>{BusinessName === '1' ? "Business" :'Supplier'}</div>
                             </div>
                         </div>
                     </div>
