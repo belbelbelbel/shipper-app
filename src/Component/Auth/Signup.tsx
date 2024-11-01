@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom'
 
 export const Signup = () => {
     const [isselected, setIsselected] = useState<number | ''>(
-        () => Number(localStorage.getItem('selectedRoleId')) || '' 
+    '' 
     )
+    // () => Number(localStorage.getItem('selectedRoleId')) || 
     const navigate = useNavigate()
     const array = [
         {
@@ -16,7 +17,7 @@ export const Signup = () => {
         {
             id: 2,
             img: 'src/assets/Supplier.png',
-            title: 'Supplier / Service Provider',
+            title: 'Supplier',
         },
         {
             id: 3,

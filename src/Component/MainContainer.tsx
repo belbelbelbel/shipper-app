@@ -8,6 +8,7 @@ import { IoLogOut } from "react-icons/io5";
 export const MainContainer = () => {
     const BusinessName = localStorage.getItem('selectedRoleId')
     const navigate = useNavigate()
+
     const LinkArray = [
         {
             icon: <MdDashboard size={22} />,
@@ -30,6 +31,7 @@ export const MainContainer = () => {
             name: 'Notifications',
         }
     ]
+
     return (
         <div className='w-screen bg-blue-100 bg-opacity-[0.3] h-screen'>
             <div className='flex w-full  h-[100%] overflow-hidden'>
@@ -41,9 +43,9 @@ export const MainContainer = () => {
                         {LinkArray.map(link => (
                             <div key={link.path} className='w-[12rem] mt-4 h-7 rounded-[5px] text-black cursor-pointer '>
                                 <a href={`/${link.path}`} className=''>
-                                    <div className='flex items-center gap-4'>
+                                    <div className='flex items-center  gap-4'>
                                         <div > {link.icon}</div>
-                                        <div>{link.name}</div>
+                                        <div className='text-black'>{link.name}</div>
                                     </div>
                                 </a>
                             </div>
@@ -55,7 +57,7 @@ export const MainContainer = () => {
                     </div>
                 </div>
                 <div className='h-[100%] w-[80%]'>
-                    <div className='w-full items-center px-20 flex justify-end h-20 bg-white  shadow-md'>
+                    <div className='w-full items-center pl-0 flex justify-end h-20 bg-white  shadow-md'>
                         <div className='items-center justify-center flex w-full'>
                             <input type="text" className='border-[0.8px] border-black w-[80%] text-[1.05rem] mx-auto px-4 py-2 outline-0 shadow-md rounded-[10px]' placeholder='e.g agricultural aspect' />
                         </div>
@@ -73,3 +75,5 @@ export const MainContainer = () => {
         </div>
     )
 }
+
+// when i click on each suplier i can access the descrition of the suppler and the location on the map  and then i can know the latitude and the longitude of the displacement on total order
