@@ -8,7 +8,7 @@ import { IoLogOut } from "react-icons/io5";
 export const MainContainer = () => {
     const BusinessName = localStorage.getItem('selectedRoleId')
     const navigate = useNavigate()
-
+    const profilename = localStorage.getItem('profilename')
     const LinkArray = [
         {
             icon: <MdDashboard size={22} />,
@@ -31,6 +31,8 @@ export const MainContainer = () => {
             name: 'Notifications',
         }
     ]
+
+    
 
     return (
         <div className='w-screen bg-blue-100 bg-opacity-[0.3] h-screen'>
@@ -64,7 +66,7 @@ export const MainContainer = () => {
                         <div className='cursor-pointer w-[30%] gap-3 flex items-center'>
                             <img src="/src/assets/profilepic.png" alt="profile" className='w-12 h-12' />
                             <div className='flex w-full flex-col'>
-                                <div className='text-[0.9rem]'>Bendee</div>
+                                <div className='text-[0.9rem]'>{profilename}</div>
                                 <div>{BusinessName === '1' ? "Business" :'Supplier'}</div>
                             </div>
                         </div>
