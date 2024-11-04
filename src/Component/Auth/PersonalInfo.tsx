@@ -25,7 +25,7 @@ export const PersonalInfo = () => {
     });
 
     // Helper to check if all fields are filled
-    const isFormComplete = Object.values(value).find((val) => val.trim() !== "");
+    const isFormComplete = Object.values(value).every((val) => val.trim() !== "");
     localStorage.setItem('profilename',value.firstname)
     const handleNext = () => {
         if (!isFormComplete) {
@@ -46,7 +46,7 @@ export const PersonalInfo = () => {
     return (
         <div className='w-screen bg-blue-100 bg-opacity-[0.3] flex h-screen'>
             <Toaster />
-            <div className='w-[50%] h-full'>
+            <div className='w-[50%] h-full bg-black'>
                 <img src="/src/assets/pexels-n-voitkevich-6120220.jpg" loading='lazy' alt="signup_logo" className='object-cover w-full h-full' />
             </div>
             <div className='w-[50%] flex h-full flex-col justify-center pt-10 gap-10'>

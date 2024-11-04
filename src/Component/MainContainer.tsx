@@ -5,10 +5,11 @@ import { IoIosPeople } from "react-icons/io";
 import { IoSettingsSharp } from "react-icons/io5";
 import { IoMdNotifications } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
+import { RiLinksFill, RiNavigationFill } from "react-icons/ri";
 export const MainContainer = () => {
     const BusinessName = localStorage.getItem('selectedRoleId')
     const navigate = useNavigate()
-    const profilename = localStorage.getItem('profilename')
+    const profilename: any = localStorage.getItem('profilename')
     const LinkArray = [
         {
             icon: <MdDashboard size={22} />,
@@ -16,10 +17,11 @@ export const MainContainer = () => {
             name: 'Dashboard',
         },
         {
-            icon: <IoSettingsSharp size={25} />,
-            path: 'overview/settings',
-            name: 'Settings',
+            icon: <RiLinksFill  size={25} fontWeight={'bold'}/>,
+            path: 'overview/connections',
+            name: 'Connections'
         },
+       
         {
             icon: <IoIosPeople size={25} />,
             path: 'overview/suppliers',
@@ -29,10 +31,26 @@ export const MainContainer = () => {
             icon: <IoMdNotifications size={25} />,
             path: 'overview/notifications',
             name: 'Notifications',
-        }
+        }, 
+         {
+            icon: <IoSettingsSharp size={25} />,
+            path: 'overview/settings',
+            name: 'Settings',
+        },
+     
     ]
 
-    
+    const capitalizeFirstLetter = (string: string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
+    const firstLetter = (value: string) => {
+        return value.charAt(0).toUpperCase();
+    }
+    const capitalizedText = capitalizeFirstLetter(profilename);
+
+    const firstLetterText = firstLetter(profilename);
+
 
     return (
         <div className='w-screen bg-blue-100 bg-opacity-[0.3] h-screen'>
@@ -64,10 +82,13 @@ export const MainContainer = () => {
                             <input type="text" className='border-[0.8px] border-black w-[80%] text-[1.05rem] mx-auto px-4 py-2 outline-0 shadow-md rounded-[10px]' placeholder='e.g agricultural aspect' />
                         </div>
                         <div className='cursor-pointer w-[30%] gap-3 flex items-center'>
-                            <img src="/src/assets/profilepic.png" alt="profile" className='w-12 h-12' />
-                            <div className='flex w-full flex-col'>
-                                <div className='text-[0.9rem]'>{profilename}</div>
-                                <div>{BusinessName === '1' ? "Business" :'Supplier'}</div>
+                            {/* <img src="/src/assets/profilepic.png" alt="profile" className='w-12 h-12' /> */}
+                            <div className='w-[4rem] items-center justify-center flex h-[3rem] bg-blue-100 bg-opacity-[1] shadow rounded-[100%]'>
+                                <div className='font-bold'>{firstLetterText}</div>
+                            </div>
+                            <div className='flex w-full  flex-col'>
+                                <div className='text-[1rem] font-bold'>{capitalizedText}</div>
+                                <div>{BusinessName === '1' ? "Business Owner" : 'Supplier'}</div>
                             </div>
                         </div>
                     </div>
