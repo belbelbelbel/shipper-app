@@ -12,13 +12,16 @@ interface SupplierProps {
 }
 
 export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => {
-    const [data,setData] = useState<Suppliers | any>(null)
+    const [data,setData] = useState('')
     useEffect(() => {
-        const handleFetch = async ({latitude}:any,{longitude}:any) => {
-            await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=daf3468e726e9c4d555abe56aedd75b6&units=metric`)
+        const handleFetch = async (latitude:any,longitude:any) => {
+          const res =   await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=daf3468e726e9c4d555abe56aedd75b6&units=metric`)
+          const result = await res.json()
+          console.log(result.name)
+          setData(result.name)
         }
-        handleFetch(data.latitude, data.longitude)
-    })
+        handleFetch(items.latitude,items.longitude)
+    },[])
     return (
         <div className=' w-[70%] justify-center flex items-center' onClick={handleClick}>
             {
@@ -32,8 +35,9 @@ export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => 
                                 {/* <div className='text-2xl text-center'> {items.name}</div> */}
                             </div>
                             <div className=' w-full flex flex-col items-center h-[60%]'>
-                                <div className='w-[8rem] h-[8rem] absolute rounded-full top-[5rem]  shadow bg-black'>
+                                <div className='w-[8rem]  flex items-center h-[8rem] absolute rounded-full top-[5rem]  shadow bg-black'>
                                     <img src="/src/assets/user2.png" alt="userpng" />
+                                    <div className='relative top-10 text-xl whitespace-nowrap'>{data}</div>
                                 </div>
                                 <div className='mt-16 w-full '>
                                     <div className='text-2xl text-center'> {items.name}</div>
@@ -43,7 +47,7 @@ export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => 
                                     <div><BsTwitterX  size={26} /></div>
                                     <div><FaInstagram  size={26} color='blue'/></div>
                                     </div>
-                                    <div className=' text-center tracking-[0.1rem] self-left'> {items.description}</div>
+                                    <div className=' text-center tracking-[0.1rem] self-left'> {items.description} {data}</div>
                                 </div>
                             </div>
                         </div>
