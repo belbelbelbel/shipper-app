@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Notifications = () => {
   return (
-    <div>Notifications</div>
+    <div>shows notification of every occurance in the app</div>
   )
 }

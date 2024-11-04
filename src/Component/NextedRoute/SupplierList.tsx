@@ -1,23 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { MdCancel } from 'react-icons/md'
 import { FaInstagram } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
-type Supplier = {
-    id: number;
-    name: string;
-    phone: string;
-    location: string;
-    alterEgo?: string;
-    description?: string;
-};
+import { Suppliers } from '@/@types';
 
 interface SupplierProps {
     handleClick: (id: any) => void
     clicked: Number
-    items: Supplier
+    items: Suppliers
 }
+
 export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => {
+    const [data,setData] = useState<Suppliers | any>(null)
+    useEffect(() => {
+        const handleFetch = async ({latitude}:any,{longitude}:any) => {
+            await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=daf3468e726e9c4d555abe56aedd75b6&units=metric`)
+        }
+        handleFetch(data.latitude, data.longitude)
+    })
     return (
         <div className=' w-[70%] justify-center flex items-center' onClick={handleClick}>
             {
@@ -26,7 +27,7 @@ export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => 
                         <div className='w-[45%] h-[55%] flex flex-col flex relative items-center bg-white rounded-[15px]'>
                             <div className='flex flex-col   w-full h-[40%] bg-black bg-opacity-[1] rounded-[15px] supplier-bg ' >
                                 <div className='absolute right-6 top-2'>
-                                    <MdCancel size={43} color='black' className='shadow' onClick={handleClick} />
+                                    <MdCancel size={43} color='white' className='shadow' onClick={handleClick} />
                                 </div>
                                 {/* <div className='text-2xl text-center'> {items.name}</div> */}
                             </div>

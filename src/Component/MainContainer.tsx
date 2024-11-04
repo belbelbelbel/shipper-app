@@ -76,7 +76,7 @@ export const MainContainer = () => {
                         <div onClick={() => navigate('/signin')}>Logout</div>
                     </div>
                 </div>
-                <div className='h-[100%] w-[80%]'>
+                <div className='h-full pb-20 w-[80%]'>
                     <div className='w-full items-center pl-0 flex justify-end h-20 bg-white  shadow-md'>
                         <div className='items-center justify-center flex w-full'>
                             <input type="text" className='border-[0.8px] border-black w-[80%] text-[1.05rem] mx-auto px-4 py-2 outline-0 shadow-md rounded-[10px]' placeholder='e.g agricultural aspect' />

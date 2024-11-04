@@ -51,7 +51,7 @@ export const Signup = () => {
             </div>
             <div className='flex w-[20%] items-center mx-auto justify-between '>
                 {/* <div className='px-10 py-2 bg-transparent border-2 border-black text-black font-bold cursor-pointer  rounded-full' onClick={()=>navigate('/')}>Back</div> */}
-                <div className={` py-3 w-full text-center rounded-full ${isselected !== "" ? "bg-black transition ease-out duration-700 text-white": "bg-transparent text-black border-black border-2" } font-bold cursor-pointer`} onClick={handleNext}>Next</div>
+                <div className={` bg-black py-3 w-full text-center rounded-full ${isselected !== "" ? "bg-black transition ease-out duration-700 text-white": " text-white bg-black border-black border-2" } font-bold cursor-pointer`} onClick={handleNext}>Next</div>
             </div>
         </div>
     )
