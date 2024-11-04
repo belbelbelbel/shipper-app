@@ -1,6 +1,8 @@
 import React from 'react'
 import { MdCancel } from 'react-icons/md'
-
+import { FaInstagram } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
+import { FaWhatsapp } from "react-icons/fa";
 type Supplier = {
     id: number;
     name: string;
@@ -35,6 +37,11 @@ export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => 
                                 <div className='mt-16 w-full '>
                                     <div className='text-2xl text-center'> {items.name}</div>
                                     <div className='text-xl text-center font-bold absolute bottom-6 left-4 self-left' style={{fontFamily:"cursive"}}> {items.alterEgo}</div>
+                                    <div className='text-xl text-center flex gap-4 font-bold absolute bottom-6 right-4 self-left' style={{fontFamily:"cursive"}}> 
+                                    <div><FaWhatsapp size={26} color='green' /></div>
+                                    <div><BsTwitterX  size={26} /></div>
+                                    <div><FaInstagram  size={26} color='blue'/></div>
+                                    </div>
                                     <div className=' text-center tracking-[0.1rem] self-left'> {items.description}</div>
                                 </div>
                             </div>
