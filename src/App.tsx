@@ -35,7 +35,7 @@ function App() {
       <Route path='/signup' element={<Signup />} />
       <Route path='/signin' element={<Signin />} />
       <Route path='/signup/PI' element={<PersonalInfo />} />
-      <Route path='overview' element={<MainContainer />}>
+      <Route path='/overview' element={<MainContainer />}>
         <Route index element={<Dashboard />} />
         <Route path='settings' element={<Settings />} />
         <Route path='suppliers' element={<Supplier />} />
