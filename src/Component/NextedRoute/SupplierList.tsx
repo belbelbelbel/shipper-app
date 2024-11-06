@@ -12,16 +12,16 @@ interface SupplierProps {
 }
 
 export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => {
-    const [data,setData] = useState('')
+    const [data, setData] = useState('')
     useEffect(() => {
-        const handleFetch = async (latitude:any,longitude:any) => {
-          const res =   await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=daf3468e726e9c4d555abe56aedd75b6&units=metric`)
-          const result = await res.json()
-          console.log(result.name)
-          setData(result.name)
+        const handleFetch = async (latitude: any, longitude: any) => {
+            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=daf3468e726e9c4d555abe56aedd75b6&units=metric`)
+            const result = await res.json()
+            console.log(result.name)
+            setData(result.name)
         }
-        handleFetch(items.latitude,items.longitude)
-    },[])
+        handleFetch(items.latitude, items.longitude)
+    }, [])
     return (
         <div className=' w-[70%] justify-center flex items-center' onClick={handleClick}>
             {
@@ -41,11 +41,11 @@ export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => 
                                 </div>
                                 <div className='mt-16 w-full '>
                                     <div className='text-2xl text-center'> {items.name}</div>
-                                    <div className='text-xl text-center font-bold absolute bottom-6 left-4 self-left' style={{fontFamily:"cursive"}}> {items.alterEgo}</div>
-                                    <div className='text-xl text-center flex gap-4 font-bold absolute bottom-6 right-4 self-left' style={{fontFamily:"cursive"}}> 
-                                    <div><FaWhatsapp size={26} color='green' /></div>
-                                    <div><BsTwitterX  size={26} /></div>
-                                    <div><FaInstagram  size={26} color='blue'/></div>
+                                    <div className='text-xl text-center font-bold absolute bottom-6 left-4 self-left' style={{ fontFamily: "cursive" }}> {items.alterEgo}</div>
+                                    <div className='text-xl text-center flex gap-4 font-bold absolute bottom-6 right-4 self-left' style={{ fontFamily: "cursive" }}>
+                                        <div><FaWhatsapp size={26} color='green' /></div>
+                                        <div><BsTwitterX size={26} /></div>
+                                        <div><FaInstagram size={26} color='blue' /></div>
                                     </div>
                                     <div className=' text-center tracking-[0.1rem] self-left'> {items.description} {data}</div>
                                 </div>

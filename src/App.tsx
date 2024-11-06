@@ -14,6 +14,7 @@ import { Settings } from './Component/NextedRoute/Settings'
 import { Supplier } from './Component/NextedRoute/Supplier'
 import { Notifications } from './Component/NextedRoute/Notifications'
 import { Connections } from './Component/NextedRoute/Connections'
+import { Inventory } from './Component/NextedRoute/Inventory'
 
 function App() {
   const location = useLocation()
@@ -38,8 +39,9 @@ function App() {
         <Route index element={<Dashboard />} />
         <Route path='settings' element={<Settings />} />
         <Route path='suppliers' element={<Supplier />} />
-        <Route path='notifications' element={<Notifications />} />
         <Route path='connections' element={<Connections />} />
+        <Route path='notifications' element={<Notifications />} />
+        <Route path='inventory' element={<Inventory />} />
 
       </Route>
     </Routes>

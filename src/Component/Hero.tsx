@@ -18,7 +18,7 @@ export const Hero = () => {
                 </div>
                 <div className=' w-[80%] mx-auto '>
                     <div className='text-[2.5rem]  tracking-[0.5px] text-white relative z-50 hero-text'>
-                        We connect MSMEs with suppliers, distributors, and logistics providers in real-time, using AI to recommend suppliers, predict inventory needs, and optimize delivery schedules.
+                    A web-based platform for connecting MSMEs with optimal suppliers and managing inventory needs using machine learning predicting and recommendation models
                     </div>
                 </div>
             </div>

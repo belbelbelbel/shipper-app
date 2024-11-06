@@ -1,8 +1,8 @@
 import React from 'react'
 import { Outlet, useNavigate } from "react-router-dom"
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdYard } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
-import { IoSettingsSharp } from "react-icons/io5";
+import { IoAccessibilitySharp, IoSettingsSharp } from "react-icons/io5";
 import { IoMdNotifications } from "react-icons/io";
 import { IoLogOut } from "react-icons/io5";
 import { RiLinksFill, RiNavigationFill } from "react-icons/ri";
@@ -37,6 +37,11 @@ export const MainContainer = () => {
             path: 'overview/settings',
             name: 'Settings',
         },
+        {
+            icon: <IoAccessibilitySharp size={25}/>,
+            path: 'overview/inventory',
+            name: 'Inventory'
+        }
      
     ]
 
