@@ -69,7 +69,7 @@ export const MainContainer = () => {
                             <div 
                                 key={link.path} 
                                 className={`w-[12rem] mt-4 h-7 rounded-[5px] text-black cursor-pointer 
-                                    ${location.pathname.includes(link.path) ? 'text-red-500 font-semibold' : 'text-gray-700'}`}
+                                    ${location.pathname === `/${link.path}` ? 'text-red-500 font-semibold' : 'text-gray-700'}`}
                             >
                                 <a href={`/${link.path}`}>
                                     <div className='flex items-center gap-4'>

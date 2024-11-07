@@ -6,7 +6,6 @@ import 'leaflet/dist/leaflet.css';
 export const Dashboard = () => {
   const [position, setPosition] = useState({ lat: 7.2905715, lng: 80.6337262 });
   const mapRef = useRef();
-
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, error);
@@ -24,7 +23,8 @@ export const Dashboard = () => {
     function error() {
       console.log("Unable to retrieve your location");
     }
-  }, []); // Run once on mount
+    
+  }, []); 
 
   const customMarkerIcon = new L.Icon({
     iconUrl: '/src/assets/location.png',

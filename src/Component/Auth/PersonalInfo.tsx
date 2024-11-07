@@ -57,17 +57,17 @@ export const PersonalInfo = () => {
                             <div className='text-[1rem] mb-2 cursor-pointer bg-black text-white px-8 py-1 rounded-[5px]' onClick={() => navigate('/signin')}>Sign In</div>
                         </div>
                         <form className='flex flex-col'>
-                            <Inputs type='text' className='text-black outline-0 w-full rounded-[7px] mt-3 border-black bg-transparent border-2 h-[7vh] p-3' value={value.email} name='email' onChange={handleChange} placeholder='email' />
-                            <Inputs type='text' className='text-black outline-0 w-full rounded-[7px] mt-3 border-black bg-transparent border-2 h-[7vh] p-3' value={value.firstname} name='firstname' onChange={handleChange} placeholder='name' />
-                            <Inputs type='password' className='text-black outline-0 w-full rounded-[7px] mt-4 border-black bg-transparent border-2 h-[7vh] p-3' value={value.password} name='password' onChange={handleChange} placeholder='password' />
+                            <Inputs type='text' className='text-black outline-0 w-full rounded-[7px] mt-3 border-black bg-transparent border-2 h-[7vh] p-3' value={value.email} name='email' onChange={handleChange} placeholder='Email' />
+                            <Inputs type='text' className='text-black outline-0 w-full rounded-[7px] mt-3 border-black bg-transparent border-2 h-[7vh] p-3' value={value.firstname} name='firstname' onChange={handleChange} placeholder='Name' />
+                            <Inputs type='password' className='text-black outline-0 w-full rounded-[7px] mt-4 border-black bg-transparent border-2 h-[7vh] p-3' value={value.password} name='password' onChange={handleChange} placeholder='Password' />
                         </form>
                     </div>
                     <div className='w-full'>
                         <div className='font-bold text-[1.1rem] mb-1 mt-4'>Business Information</div>
-                        <Inputs type='text' className='text-black outline-0 w-full rounded-[7px] mt-2 border-black bg-transparent border-2 h-[7vh] p-3' value={value.company} name='company' onChange={handleChange} placeholder='business name' />
+                        <Inputs type='text' className='text-black outline-0 w-full rounded-[7px] mt-2 border-black bg-transparent border-2 h-[7vh] p-3' value={value.company} name='company' onChange={handleChange} placeholder='Business name' />
                         <Select>
                             <SelectTrigger className="w-full">
-                                <SelectValue placeholder="business type" />
+                                <SelectValue placeholder="Business type" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
@@ -77,10 +77,10 @@ export const PersonalInfo = () => {
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
-                        <Inputs type='text' className='text-black outline-0 w-full rounded-[7px] mt-3 border-black bg-transparent border-2 h-[7vh] p-3' value={value.address} name='address' onChange={handleChange} placeholder='address' />
+                        <Inputs type='text' className='text-black outline-0 w-full rounded-[7px] mt-3 border-black bg-transparent border-2 h-[7vh] p-3' value={value.address} name='address' onChange={handleChange} placeholder='Address' />
                         <Select>
                             <SelectTrigger className="w-full">
-                                <SelectValue placeholder="business size" />
+                                <SelectValue placeholder="Business size" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
