@@ -81,7 +81,7 @@ export const PersonalInfo = () => {
                 <div className='bg-black h-full w-full absolute inset-0 bg-opacity-[0.2]'></div>
             </div>
             <div className='w-[50%] flex h-full flex-col justify-center  pt-10 gap-10'>
-                <div className='w-[80%] mx-auto flex flex-col overflow-auto py-4 gap-1'>
+                <div className='w-[80%] mx-auto flex flex-col overflow-auto scrollbar py-4 gap-1'>
                     <div>
                         <div className='flex w-full justify-between items-center'>
                             <div className='font-bold text-[1.1rem] mb-1'>Personal Information</div>
