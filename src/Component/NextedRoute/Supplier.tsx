@@ -10,6 +10,11 @@ export const Supplier = () => {
     console.log(id)
   }
 
+  const handleRemove = () => {
+    setClicked(0)
+    console.log('removed')
+  }
+
   return (
     <div className='w-full  h-full overflow-y-auto'>
       <div className='flex max-w-[92%]   mx-auto m-10  gap-8 flex-wrap'>
@@ -23,7 +28,6 @@ export const Supplier = () => {
               </div>
               <SupplierList handleClick={handleClick} clicked={clicked} items={items} />
             </div>
-
           ))
         }
       </div>
