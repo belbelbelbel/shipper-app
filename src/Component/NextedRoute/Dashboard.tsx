@@ -48,7 +48,7 @@ export const Dashboard = () => {
       <MapContainer
         center={position}
         zoom={18}
-        style={{ width: '100%', height: '80%' }}
+        style={{ width: '100%', height: '80%'}}
         whenCreated={(mapInstance: any) => (mapRef.current = mapInstance)}
       >
         <TileLayer

@@ -17,8 +17,9 @@ export const Signin = () => {
 
     return (
         <div className='w-screen h-screen flex'>
-            <div className='w-[50%] bg-black h-full'>
-                <img src="/src/assets/pexels-n-voitkevich-6120220.jpg" loading='lazy' alt="signup_logo" className='object-cover w-full h-full' />
+            <div className='w-[50%] bg-black relative h-full'>
+                <img src="/src/assets/pexels-4.jpg" loading='lazy' alt="signup_logo" className='object-cover w-full h-full' />
+                <div className='bg-black h-full w-full absolute inset-0 bg-opacity-[0.2]'></div>
             </div>
 
             <div className='w-[50%] bg-blue-100 bg-opacity-[0.3] mx-auto'>
