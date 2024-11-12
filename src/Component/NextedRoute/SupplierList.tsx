@@ -5,7 +5,6 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
 import { Suppliers } from '@/@types';
 import { FaRocketchat } from "react-icons/fa6";
-import { FaRegWindowMinimize } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 interface SupplierProps {
