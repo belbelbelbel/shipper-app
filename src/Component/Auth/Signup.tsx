@@ -28,11 +28,16 @@ export const Signup = () => {
 
     const handleNext = () => {
        if(isselected) {
+       if(isselected === 1) {
         navigate('/signup/PI')
+       }
+       else{
+        navigate('/signup/SI')
+       }
        }
     }
     return (
-        <div className='bg-[rgb(230,230,230)] bg-blue-100 bg-opacity-[0.3] flex flex-col justify-center gap-16 items-center h-screen w-screen '>
+        <div className=' bg-opacity-[0.3] flex flex-col justify-center gap-16 items-center h-screen w-screen '>
             <div className='text-2xl uppercase font-medium'>Select Your Role</div>
             <div className='flex w-[80%] items-center justify-center  mx-auto'>
                 {

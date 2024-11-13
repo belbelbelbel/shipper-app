@@ -15,6 +15,7 @@ import { Supplier } from './Component/NextedRoute/Supplier'
 import { Notifications } from './Component/NextedRoute/Notifications'
 import { Connections } from './Component/NextedRoute/Connections'
 import { Inventory } from './Component/NextedRoute/Inventory'
+import { SuppliersSignup } from './Component/Auth/SuppliersSignup'
 
 function App() {
   const location = useLocation()
@@ -35,6 +36,7 @@ function App() {
       <Route path='/signup' element={<Signup />} />
       <Route path='/signin' element={<Signin />} />
       <Route path='/signup/PI' element={<PersonalInfo />} />
+      <Route path='/signup/SI' element={<SuppliersSignup />} />
       <Route path='/overview' element={<MainContainer />}>
         <Route index element={<Dashboard />} />
         <Route path='settings' element={<Settings />} />
@@ -42,7 +44,6 @@ function App() {
         <Route path='connections' element={<Connections />} />
         <Route path='notifications' element={<Notifications />} />
         <Route path='inventory' element={<Inventory />} />
-
       </Route>
     </Routes>
   )

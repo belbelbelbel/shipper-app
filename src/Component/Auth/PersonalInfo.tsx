@@ -65,23 +65,23 @@ export const PersonalInfo = () => {
         setState({
           optionSelected: selected
         });
-    };
+      };
 
-    const smeSectorOptions = smeSectors.map((sector) => ({
+      const smeSectorOptions = smeSectors.map((sector) => ({
         label: sector,
         value: sector
     }));
     
 
     return (
-        <div className='w-screen bg-blue-100 bg-opacity-[0.3] flex h-screen'>
+        <div className='w-screen bg-white bg-opacity-[0.3] flex h-screen'>
             <Toaster />
             <div className='w-[50%] h-full relative  bg-black'>
                 <img src="/src/assets/pexels-4.jpg" loading='lazy' alt="signup_logo" className='object-cover w-full h-full' />
                 <div className='bg-black h-full w-full absolute inset-0 bg-opacity-[0.2]'></div>
             </div>
-            <div className='w-[50%] flex h-full flex-col justify-center  pt-10 gap-10'>
-                <div className='w-[80%] mx-auto flex flex-col overflow-auto scrollbar py-4 gap-1'>
+            <div className='w-[50%] flex h-full flex-col justify-center   pt-10 gap-10'>
+                <div className='w-[80%] mx-auto flex flex-col overflow-auto py-4 gap-1'>
                     <div>
                         <div className='flex w-full justify-between items-center'>
                             <div className='font-bold text-[1.1rem] mb-1'>Personal Information</div>
@@ -104,7 +104,7 @@ export const PersonalInfo = () => {
                                 Option
                             }}
                             onChange={handleChanges}
-                            className='border-black border-2 rounded-[7px] bg-transparent outline-0'
+                            className='border-black border-2 rounded-[7px] bg-transparnt outline-0'
                             value={state.optionSelected}
                         // Hide dropdown list  when select any item
                         // closeMenuOnSelect={true}

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { MdCancel } from 'react-icons/md'
 import { FaInstagram } from "react-icons/fa6";
-import { BsTwitterX } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
 import { Suppliers } from '@/@types';
 import { FaRocketchat } from "react-icons/fa6";
 import { IoSend } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+import { SiGmail } from "react-icons/si";
 interface SupplierProps {
     handleClick: (id: number) => void
     clicked: Number
@@ -47,9 +47,10 @@ export const SupplierList = ({ handleClick, clicked, items }: SupplierProps) => 
                                     <div className='text-xl text-center font-bold absolute bottom-6 left-4 self-left' style={{ fontFamily: "cursive" }}> {items.alterEgo}</div>
                                     <div className='text-xl text-center flex gap-4 font-bold absolute bottom-6 right-4 self-left' style={{ fontFamily: "cursive" }}>
                                         <div > <a href={`https://wa.me/${items.phone}`} target="_blank" rel="noopener noreferrer"><FaWhatsapp size={26} color='green' /></a></div>
-                                        <div onClick={() => setShow(true)}><FaRocketchat size={26} color='red' /> </div>
-                                        <div><BsTwitterX size={24} /></div>
-                                        <div><FaInstagram size={26} color='blue' /></div>
+                                        <div onClick={() => setShow(true)}><FaRocketchat size={26} color='blue' /> </div>
+                                        <div><SiGmail size={26} color='red' /></div>
+                                        <div><FaInstagram size={26} color='purple' /></div>
+                                        
                                     </div>
                                     <div className=' text-center tracking-[0.1rem] self-left'> {items.description} {data}</div>
                                 </div>

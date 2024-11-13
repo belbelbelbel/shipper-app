@@ -16,13 +16,13 @@ export const Signin = () => {
     }
 
     return (
-        <div className='w-screen h-screen flex'>
+        <div className='w-screen h-screen  flex'>
             <div className='w-[50%] bg-black relative h-full'>
                 <img src="/src/assets/pexels-4.jpg" loading='lazy' alt="signup_logo" className='object-cover w-full h-full' />
                 <div className='bg-black h-full w-full absolute inset-0 bg-opacity-[0.2]'></div>
             </div>
 
-            <div className='w-[50%] bg-blue-100 bg-opacity-[0.3] mx-auto'>
+            <div className='w-[50%] bg-white bg-opacity-[0.3] mx-auto'>
                 <form className='w-[80%] h-full mx-auto  flex-col justify-center flex '>
                     <div className='font-bold text-[2rem] text-center m-4'>Sign In</div>
                     <Inputs value={details.email} type='text' placeholder='email' name='email' onChange={handlechange} className='text-black outline-0 w-[100%]  mx-auto rounded-[7px] mb-0 mt-3 border-black bg-transparent   border-2 h-[7vh]  p-3' />
